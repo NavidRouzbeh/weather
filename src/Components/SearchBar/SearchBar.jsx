@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React from 'react';
-import './SearchBar.scss';
 
 const SearchBar = ({location, setLocation , setCityWeather}) => {
 
@@ -17,7 +16,7 @@ const SearchBar = ({location, setLocation , setCityWeather}) => {
 
     return(
 
-        <div className="search_box">
+        <div className="search">
             <input value={location} onChange={event => setLocation(event.target.value)} onKeyDown={searchLocation} type="text" />
         </div>
 

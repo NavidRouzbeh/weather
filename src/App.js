@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import WeatherInfo from "./Components/WeatherInfo/WeatherInfo";
+import './App.scss';
 
 function App() {
 

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React , { useState , useEffect } from "react";
+import './WeatherDetail.scss';
 
 const WeatherDetail = ({cityWeather}) => {
 
