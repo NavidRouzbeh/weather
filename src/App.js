@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import SearchBar from "./Components/SearchBar/SearchBar";
+import WeatherInfo from "./Components/WeatherInfo/WeatherInfo";
 
 function App() {
-  return (
+
+  const [cityWeather, setCityWeather] = useState([])
+  const [location, setLocation] = useState('')
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        <p className="page__info">نام شهر یا کشور را وارد کنید: </p>
+        <SearchBar location={location} setLocation={setLocation} setCityWeather={setCityWeather}/>
+        { cityWeather.length !== 0 && ( <WeatherInfo cityWeather={cityWeather} /> )}
     </div>
   );
-}
+};
 
 export default App;
